@@ -8,7 +8,7 @@ export default function Home() {
   useEffect(() => {
     async function carregarPocoes() {
       try {
-        const response = await axios.get("http://localhost:3000/pocoes");
+        const response = await axios.get("http://localhost:3333/pocoes");
         if (response.status == 200) {
           setPocoes(response.data);
         }
@@ -33,10 +33,10 @@ export default function Home() {
           return (
             <PocaoCard
               key={pocao.id}
-              name={pocao.name}
-              description={pocao.description}
-              image={pocao.image}
-              price={pocao.price}
+              nome={pocao.nome}
+              descricao={pocao.descricao}
+              imagem={pocao.imagem}
+              preco={pocao.preco}
             />
           );
         })}

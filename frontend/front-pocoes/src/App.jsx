@@ -8,9 +8,7 @@ export default function App() {
   return (
     <Router>
       <div className="App">
-        // component to nav
         <Navigation />
-        // renders the current page
         <MyRoutes />
       </div>
     </Router>
